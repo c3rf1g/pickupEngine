@@ -4,6 +4,6 @@ openai==0.27.4
 opencv-python==4.5.2.54
 Pillow==9.5.0
 aiogram==2.25.1
-pydantic==4.5.0
+pydantic==1.10.7
 fastapi==0.95.1
 pytesseract==9.5.0

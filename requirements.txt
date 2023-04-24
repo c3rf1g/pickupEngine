@@ -6,4 +6,4 @@ Pillow==9.5.0
 aiogram==2.25.1
 pydantic==1.10.7
 fastapi==0.95.1
-pytesseract==9.5.0
+pytesseract==0.3.10

@@ -1,1 +1,1 @@
-web: uvicorn api:app
+web: uvicorn api:app --bind 0.0.0.0:3000

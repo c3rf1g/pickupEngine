@@ -1,1 +1,1 @@
-web: uvicorn api:app --fd 0.0.0.0:3000
+uvicorn main:app --host 0.0.0.0 --port $PORT

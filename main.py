@@ -1,4 +1,4 @@
-
+import os
 
 import pytesseract
 import cv2 as cv
@@ -6,7 +6,8 @@ from PIL import Image
 import numpy as np
 
 from getComplition import generate_completion
-
+pytesseract.pytesseract.tesseract_cmd = "/app/.apt/usr/bin/tesseract"
+os.environ['TESSDATA_PREFIX'] = '/app/.apt/usr/share/tesseract-ocr/4.00/tessdata'
 
 def get_text_from_image(image, i):
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
@@ -20,7 +21,7 @@ def get_text_from_image(image, i):
     # cv.imwrite("./img" + str(i) + ".jpg", dilated)
     custom_config = r'--oem 1 -l eng+rus'
     # pytesseract.pytesseract.tesseract_cmd = r'./5.3.1/bin/tesseract'
-    pytesseract.pytesseract.tesseract_cmd = "/app/.apt/usr/bin/tesseract"
+
     pil_image = Image.fromarray(gray)
     text = pytesseract.image_to_string(pil_image, lang='rus', config=custom_config)
     return text

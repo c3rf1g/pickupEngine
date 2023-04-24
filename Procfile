@@ -1,1 +1,1 @@
-web: uvicorn api:app --bind 0.0.0.0:3000
+web: uvicorn api:app --fd 0.0.0.0:3000

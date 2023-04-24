@@ -19,7 +19,8 @@ def get_text_from_image(image, i):
     dilated = cv.dilate(gray, kernel, iterations=1)
     # cv.imwrite("./img" + str(i) + ".jpg", dilated)
     custom_config = r'--oem 1 -l eng+rus'
-    pytesseract.pytesseract.tesseract_cmd = r'./5.3.1/bin/tesseract'
+    # pytesseract.pytesseract.tesseract_cmd = r'./5.3.1/bin/tesseract'
+    pytesseract.pytesseract.tesseract_cmd = "/app/.apt/usr/bin/tesseract"
     pil_image = Image.fromarray(gray)
     text = pytesseract.image_to_string(pil_image, lang='rus', config=custom_config)
     return text

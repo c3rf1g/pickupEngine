@@ -1,5 +1,4 @@
-import datetime
-import time
+
 
 import pytesseract
 import cv2 as cv

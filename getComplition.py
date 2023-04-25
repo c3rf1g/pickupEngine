@@ -1,5 +1,6 @@
 import openai
-openai.api_key = "sk-xXXxa7Hn0wZYi42ASzm8T3BlbkFJaQDwSj5VZdFOp3BaYJ5y"
+import os
+openai.api_key = os.environ.get('MY_KEY', '')
 
 
 def generate_completion(messages, user_id):

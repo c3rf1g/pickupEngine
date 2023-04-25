@@ -6,8 +6,8 @@ from PIL import Image
 import numpy as np
 
 from getComplition import generate_completion
-pytesseract.pytesseract.tesseract_cmd = "/app/.apt/usr/bin/tesseract"
-os.environ['TESSDATA_PREFIX'] = '/app/.apt/usr/share/tesseract-ocr/4.00/tessdata'
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+os.environ['TESSDATA_PREFIX'] = '/usr/share/tesseract-ocr/4.00/tessdata'
 
 def get_text_from_image(image, i):
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)

@@ -1,5 +1,5 @@
 import openai
-openai.api_key = "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"
+openai.api_key = "sk-xXXxa7Hn0wZYi42ASzm8T3BlbkFJaQDwSj5VZdFOp3BaYJ5y"
 
 
 def generate_completion(messages, user_id):
